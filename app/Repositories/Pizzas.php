@@ -1,6 +1,6 @@
 <?php
 namespace App\Repositories;
-use App\Http\Requests\PizzaRequest;
+use App\Http\Requests\{PizzaRequest,PizzaToppingRequest};
 
 interface Pizzas
 {
@@ -8,4 +8,5 @@ interface Pizzas
     public function getAll();
     public function findById($id);
     public function destroy($id);
+    public function addToppingToPizzas(PizzaToppingRequest $request,$id);
 }

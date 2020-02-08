@@ -14,3 +14,5 @@ use Illuminate\Http\Request;
 */
 
 Route::resource('pizzas', 'Pizzas\PizzasController')->only(['store','index','show','destroy']);
+Route::resource('toppings', 'Toppings\ToppingsController')->only(['store','index','destroy']);
+Route::resource('pizzas.toppings', 'Pizzas\PizzasToppingsController')->only(['store','index']);

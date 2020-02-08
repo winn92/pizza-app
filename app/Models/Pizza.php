@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Pizza extends Model
 {
     protected $fillable = array('name');
+
+    public function toppings()
+    {
+        return $this->belongsToMany(Topping::class,"pizza_topping");
+    }
 }

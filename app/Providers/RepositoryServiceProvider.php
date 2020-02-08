@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Repositories\Pizzas;
-use App\Repositories\PizzasEloquent;
+use App\Repositories\{Pizzas,Toppings};
+use App\Repositories\{PizzasEloquent,ToppingsEloquent};
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -16,6 +16,7 @@ class RepositoryServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(Pizzas::class, PizzasEloquent::class);
+        $this->app->bind(Toppings::class, ToppingsEloquent::class);
     }
 
     /**
