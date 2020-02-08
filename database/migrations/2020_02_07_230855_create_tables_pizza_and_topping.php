@@ -25,9 +25,13 @@ class CreateTablesPizzaAndTopping extends Migration
             $table->timestamps();
         });
 
+        
+
         Schema::create('pizza_topping', function (Blueprint $table) {
-            $table->bigInteger('pizza_id');
-            $table->bigInteger('topping_id');
+            $table->unsignedBigInteger('pizza_id');
+            $table->unsignedBigInteger('topping_id');
+            $table->foreign('pizza_id')->references('id')->on('pizzas')->onDelete('cascade');
+            $table->foreign('topping_id')->references('id')->on('toppings')->onDelete('cascade');
             $table->timestamps();
         });
     }
