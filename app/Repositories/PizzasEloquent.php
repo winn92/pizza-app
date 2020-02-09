@@ -29,4 +29,10 @@ class PizzasEloquent implements Pizzas
         return $this->findById($id);
     }
 
+    public function removeToppingFromPizzas($pizzaId,$toppingId){
+        $pizza = $this->findById($pizzaId);
+        $pizza->toppings()->detach($toppingId);
+        return $this->findById($pizzaId);
+    }
+
 }

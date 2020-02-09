@@ -4,15 +4,15 @@
       <b-navbar-nav>
         <b-nav-item href="#">UI</b-nav-item>
 
-        <!--<b-nav-item-dropdown text="Projects" left>
-          <b-dropdown-item ex to="/projects">List</b-dropdown-item>
-          <b-dropdown-item to="/projects/create">Create</b-dropdown-item>
+        <b-nav-item-dropdown text="Pizzas" left>
+          <b-dropdown-item ex to="/pizzas">List</b-dropdown-item>
+          <!--<b-dropdown-item to="/projects/create">Create</b-dropdown-item>-->
         </b-nav-item-dropdown>
 
-        <b-nav-item-dropdown text="Tasks" left>
-          <b-dropdown-item to="/tasks">List</b-dropdown-item>
-          <b-dropdown-item to="/tasks/create">Create</b-dropdown-item>
-        </b-nav-item-dropdown>-->
+        <b-nav-item-dropdown text="Toppings" left>
+          <b-dropdown-item to="/toppings">List</b-dropdown-item>
+          <b-dropdown-item to="/toppings/create">Create</b-dropdown-item>
+        </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-navbar>
     <router-view />

@@ -65,8 +65,8 @@ class PizzasToppingsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($pizza,$topping)
     {
-        //
+        return $this->pizzas->removeToppingFromPizzas($pizza,$topping);
     }
 }

@@ -9,4 +9,5 @@ interface Pizzas
     public function findById($id);
     public function destroy($id);
     public function addToppingToPizzas(PizzaToppingRequest $request,$id);
+    public function removeToppingFromPizzas($pizzaId,$toppingId);
 }
